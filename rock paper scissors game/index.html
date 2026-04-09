@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Rock Paper Scissors Game</title>
+    </head>
+    <body>
+        <main class="game">
+            <p class="eyebrow">Classic Hand Game</p>
+            <h1>Rock Paper Scissors</h1>
+            <p class="subtitle">Pick a move and see if you can beat the computer.</p>
+
+            <div class="choices">
+                <button onclick="playGame('rock')" aria-label="Choose rock">✊</button>
+                <button onclick="playGame('paper')" aria-label="Choose paper">✋</button>
+                <button onclick="playGame('scissors')" aria-label="Choose scissors">✌️</button>
+            </div>
+
+            <section class="scoreboard" aria-label="Scoreboard">
+                <div class="score-card">
+                    <span class="score-label">Player</span>
+                    <span id="playerScore" class="score-value">0</span>
+                </div>
+                <div class="score-card">
+                    <span class="score-label">Ties</span>
+                    <span id="tieScore" class="score-value">0</span>
+                </div>
+                <div class="score-card">
+                    <span class="score-label">Computer</span>
+                    <span id="computerScore" class="score-value">0</span>
+                </div>
+            </section>
+
+            <section class="status-board" aria-live="polite">
+                <div id="playerDisplay" class="status-line">Player: waiting...</div>
+                <div id="computerDisplay" class="status-line">Computer: waiting...</div>
+                <div id="resultDisplay" class="result-display">Make your move</div>
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+    </html>
