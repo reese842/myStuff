@@ -1,4 +1,4 @@
-//fizzbuzz so multiple of 3 print fizz multile of 5 prints buzz if its both it will print fizzbuzz
+//fizzbuzz, multiple of 3 print fizz multiple of 5 prints buzz if its both (e.g 15)it will print fizzbuzz
 
 
 for (let i=1; i<=100; i+=1){
