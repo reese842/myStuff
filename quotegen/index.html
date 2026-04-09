@@ -1,0 +1,22 @@
+<button onclick="getQuote()">Get Quote</button>
+<p id="quote"></p>
+
+<script>
+  async function getQuote() {
+    const quoteEl = document.getElementById("quote");
+    quoteEl.innerText = "Loading...";
+
+    try {
+      const res = await fetch("https://dummyjson.com/quotes/random");
+
+      if (!res.ok) {
+        throw new Error("Request failed");
+      }
+
+      const data = await res.json();
+      quoteEl.innerText = `${data.quote} - ${data.author}`;
+    } catch (error) {
+      quoteEl.innerText = "Could not load a quote right now.";
+    }
+  }
+</script>
